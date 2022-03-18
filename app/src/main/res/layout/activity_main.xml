@@ -12,11 +12,14 @@
         android:layout_width="180dp"
         android:layout_height="75dp"
         android:layout_marginEnd="16dp"
+        android:onClick="guessClick"
         app:backgroundTint="#FF9636"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnThree"
         app:layout_constraintTop_toBottomOf="@+id/btnTwo"
-        app:layout_constraintVertical_bias="0.081"
+        app:layout_constraintVertical_bias="0.082"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -25,6 +28,7 @@
         android:layout_height="75dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:onClick="guessClick"
         app:backgroundTint="#FF9636"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgMain"
@@ -35,6 +39,7 @@
         android:layout_width="180dp"
         android:layout_height="75dp"
         android:layout_marginStart="16dp"
+        android:onClick="guessClick"
         app:backgroundTint="#FF9636"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +53,10 @@
         android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:onClick="guessClick"
         app:backgroundTint="#FF9636"
+        app:layout_constraintEnd_toStartOf="@+id/btnTwo"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgMain"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -70,15 +78,15 @@
 
     <ImageView
         android:id="@+id/imgMain"
-        android:layout_width="374dp"
-        android:layout_height="343dp"
+        android:layout_width="367dp"
+        android:layout_height="284dp"
         android:layout_marginTop="84dp"
+        android:contentDescription="TODO"
         android:src="@android:drawable/ic_menu_gallery"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/score"
@@ -86,7 +94,7 @@
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
         android:text="0"
-        android:textColor="#FFFFFF"
+        android:textColor="#FFF8F1"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/imgMain"
         app:layout_constraintEnd_toStartOf="@+id/btnAbout"
@@ -94,21 +102,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_width="130dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#FF9636"
-        android:text="Next"
-        android:textSize="24sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnThree"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
