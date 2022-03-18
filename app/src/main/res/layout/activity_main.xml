@@ -66,7 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:contentDescription="TODO"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:onClick="AboutButton"
         android:src="@android:drawable/ic_dialog_info"
         app:layout_constraintBottom_toTopOf="@+id/imgMain"
@@ -75,14 +76,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.388"
-        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+        tools:ignore="ImageContrastCheck,ImageContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/imgMain"
         android:layout_width="367dp"
         android:layout_height="284dp"
         android:layout_marginTop="84dp"
-        android:contentDescription="TODO"
         android:src="@android:drawable/ic_menu_gallery"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
@@ -94,7 +94,7 @@
         android:layout_width="33dp"
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
-        android:text="0"
+        android:text="@string/Score"
         android:textColor="#FFF8F1"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/imgMain"
@@ -102,7 +102,8 @@
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/playagain"

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Guess Game</string>
+    <string name="back">Back</string>
+    <string name="Instructions">To play this game you simply select the button with the name of the celebrity in the picture! If you get the answer correct the button will turn green, and the screen will automatically change to the next question. If you get the answer incorrect the button will turn red, and a message will appear on the screen to inform you of the correct name before the screen changes to the next question! After you have answered five questions the game will congratulate you and let you know how many questions you got correct out of five.</string>
+    <string name="About">About:</string>
+    <string name="Score">0</string>
 </resources>
