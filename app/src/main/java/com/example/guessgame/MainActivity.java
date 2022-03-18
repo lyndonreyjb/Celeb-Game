@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -22,7 +23,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<String> celebNames = new ArrayList();
-    ImageView imgMain;
+    ImageView imgMain, btnAbout;
     Button btnOne, btnTwo, btnThree, btnFour, playAgain;
     HashMap<String, Integer> names = new HashMap<>();
     TextView score;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         ans = 0;
 
         playAgain = findViewById(R.id.playagain);
+        btnAbout = findViewById(R.id.btnAbout);
 
         btnOne = findViewById(R.id.btnOne);
         btnTwo = findViewById(R.id.btnTwo);
@@ -184,6 +186,12 @@ public class MainActivity extends AppCompatActivity {
         btnFour.setVisibility(View.VISIBLE);
 
         start();
+    }
+
+    public void AboutButton(View view) //open about window
+    {
+        Intent intent = new Intent(this, AboutScreen.class);
+        startActivity(intent);
     }
 
 }

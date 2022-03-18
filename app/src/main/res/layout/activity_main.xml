@@ -67,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:contentDescription="TODO"
+        android:onClick="AboutButton"
         android:src="@android:drawable/ic_dialog_info"
         app:layout_constraintBottom_toTopOf="@+id/imgMain"
         app:layout_constraintEnd_toEndOf="parent"
