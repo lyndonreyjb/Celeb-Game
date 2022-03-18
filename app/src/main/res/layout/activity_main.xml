@@ -8,29 +8,16 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnFour"
+        android:id="@+id/btnOne"
         android:layout_width="180dp"
         android:layout_height="75dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="guessClick"
-        app:backgroundTint="#FF9636"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnThree"
-        app:layout_constraintTop_toBottomOf="@+id/btnTwo"
-        app:layout_constraintVertical_bias="0.082"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/btnTwo"
-        android:layout_width="180dp"
-        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
         android:onClick="guessClick"
         app:backgroundTint="#FF9636"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTwo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgMain"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -48,17 +35,30 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/btnOne"
+        android:id="@+id/btnTwo"
         android:layout_width="180dp"
         android:layout_height="75dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:onClick="guessClick"
         app:backgroundTint="#FF9636"
-        app:layout_constraintEnd_toStartOf="@+id/btnTwo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgMain"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnFour"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="guessClick"
+        app:backgroundTint="#FF9636"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnThree"
+        app:layout_constraintTop_toBottomOf="@+id/btnTwo"
+        app:layout_constraintVertical_bias="0.082"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
@@ -102,5 +102,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/playagain"
+        android:layout_width="382dp"
+        android:layout_height="582dp"
+        android:layout_marginTop="16dp"
+        android:onClick="playAgain"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

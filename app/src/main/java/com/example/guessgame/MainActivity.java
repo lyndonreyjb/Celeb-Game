@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<String> celebNames = new ArrayList();
     ImageView imgMain;
-    Button btnOne, btnTwo, btnThree, btnFour;
+    Button btnOne, btnTwo, btnThree, btnFour, playAgain;
     HashMap<String, Integer> names = new HashMap<>();
     TextView score;
+    Toast myToast;
 
     int count, index, ans;
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         count = 0;
         ans = 0;
 
+        playAgain = findViewById(R.id.playagain);
 
         btnOne = findViewById(R.id.btnOne);
         btnTwo = findViewById(R.id.btnTwo);
@@ -71,9 +73,7 @@ public class MainActivity extends AppCompatActivity {
         btnTwo.setBackgroundColor(Color.parseColor("#FF9636"));
         btnThree.setBackgroundColor(Color.parseColor("#FF9636"));
         btnFour.setBackgroundColor(Color.parseColor("#FF9636"));
-
-
-
+        
         guessCeleb(index);
     }
 
@@ -106,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
         String rightGuess = celebNames.get(index);
 
         ans++;
+        index++;
 
         if(guess == rightGuess){
-            index++;
             view.setBackgroundColor(Color.parseColor("#00A300"));
             count++;
 
@@ -126,10 +126,10 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            index++;
             view.setBackgroundColor(Color.parseColor("#D10000"));
 
-            Toast.makeText(getApplicationContext(),rightGuess,Toast.LENGTH_SHORT).show();
+            myToast = Toast.makeText(getApplicationContext(),rightGuess,Toast.LENGTH_SHORT);
+            myToast.show();
 
             checkWin();
 
@@ -149,13 +149,41 @@ public class MainActivity extends AppCompatActivity {
     public void checkWin() {
         if(count == 5){
             index = 0;
-            // display message play again method
-
+            myToast.cancel();
+        playAgain.setVisibility(View.VISIBLE);
+        btnOne.setVisibility(View.INVISIBLE);
+        btnTwo.setVisibility(View.INVISIBLE);
+        btnThree.setVisibility(View.INVISIBLE);
+        btnFour.setVisibility(View.INVISIBLE);
+        playAgain.setText("Congratulations \n You got 5/5 right! \n\n\n Click anywhere to play again");
 
         } else if(ans == 5){
             index = 0;
-           // display message play again method
+            myToast.cancel();
+            playAgain.setVisibility(View.VISIBLE);
+            btnOne.setVisibility(View.INVISIBLE);
+            btnTwo.setVisibility(View.INVISIBLE);
+            btnThree.setVisibility(View.INVISIBLE);
+            btnFour.setVisibility(View.INVISIBLE);
+            playAgain.setText("Congratulations \n You got " +   count + "/5 right! \n\n\n Click anywhere to play again");
         }
+    }
+
+
+    public void playAgain(View view){
+
+        score.setText("0");
+        count = 0;
+        ans = 0;
+        index = 0;
+
+        playAgain.setVisibility(View.INVISIBLE);
+        btnOne.setVisibility(View.VISIBLE);
+        btnTwo.setVisibility(View.VISIBLE);
+        btnThree.setVisibility(View.VISIBLE);
+        btnFour.setVisibility(View.VISIBLE);
+
+        start();
     }
 
 }
