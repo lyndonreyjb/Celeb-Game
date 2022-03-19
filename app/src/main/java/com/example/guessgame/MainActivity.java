@@ -22,7 +22,8 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> celebNames = new ArrayList();
+
+    ArrayList<String> celebNames = new ArrayList(); // store celeb names
     ImageView imgMain, btnAbout;
     Button btnOne, btnTwo, btnThree, btnFour, playAgain;
     HashMap<String, Integer> names = new HashMap<>(); // use hashmap to store key/values
