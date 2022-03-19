@@ -37,15 +37,16 @@
 
     <TextView
         android:id="@+id/txtInstructions"
-        android:layout_width="370dp"
-        android:layout_height="463dp"
+        android:layout_width="323dp"
+        android:layout_height="411dp"
         android:layout_marginBottom="20dp"
         android:text="@string/Instructions"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
 </androidx.constraintlayout.widget.ConstraintLayout>
